@@ -4,7 +4,6 @@
 	<author>Nova and Company</author>
 	<packageId>nova.rimworldtogether</packageId>
 	<supportedVersions>
-		<li>1.5</li>
 		<li>1.6</li>
 	</supportedVersions>
 	<loadAfter>
@@ -23,7 +22,7 @@
 		</li>
 	</modDependencies>
 	<incompatibleWith>
-		<li>jikulopo.prepatcher</li>
+		<li>arandomkiwi.rimsaves</li>
 	</incompatibleWith>
 	<description>Ever wondered how would it be to be able to play with other players online in the same RimWorld world?\n
 "RimWorld Together" is an early access community project founded by people who want to push the idea further!\n
