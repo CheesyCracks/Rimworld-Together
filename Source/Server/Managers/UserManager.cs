@@ -119,13 +119,14 @@ namespace RTServer.Managers
 
         public static bool CheckIfUserBanned(ServerClient client)
         {
-            if (!client.GetData<FL_Player>().IsBanned) return false;
-            else
+            if (client.GetData<FL_Player>().IsBanned || Master.IpBansConfig.CheckForIPBan(client.GetData<FL_Player>().LatestIP))
             {
                 Printer.Message($"Banned user '{client.GetData<FL_Player>().Username}' tried to join the server");
                 PM_Login.DenyConnectionWithReason(client, LoginResponse.Ban);
                 return true;
             }
+
+            else return false;
         }
     }
 }

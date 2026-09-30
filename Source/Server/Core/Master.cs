@@ -64,6 +64,8 @@ namespace RTServer.Core
         public static FL_ModConfig ModConfig { get; set; } = null;
 
         public static FL_ChatConfig ChatConfig { get; set; } = null;
+        
+        public static FL_IPBanConfig IpBansConfig { get; set; } = null;
 
         public static FL_Leaderboard LeaderboardFile { get; set; } = null;
 

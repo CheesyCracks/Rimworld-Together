@@ -56,6 +56,7 @@ namespace RTServer.Core
             FL_PasswordConfig.SavePath = Path.Combine(Master.ConfigsPath, "PasswordConfig.json");
             FL_BackupsConfig.SavePath = Path.Combine(Master.ConfigsPath, "BackupConfig.json");
             FL_ChatConfig.SavePath = Path.Combine(Master.ConfigsPath, "ChatConfig.json");
+            FL_IPBanConfig.SavePath = Path.Combine(Master.AssetsPath, "IPBans.json");
             FL_Leaderboard.SavePath = Path.Combine(Master.AssetsPath, "Leaderboard.json");
             FL_Market.SavePath = Path.Combine(Master.AssetsPath, "Market.json");
             FL_Road.SavePath = Path.Combine(Master.AssetsPath, "Roads.json");
@@ -133,6 +134,9 @@ namespace RTServer.Core
 
             Master.ChatConfig = (FL_ChatConfig)FL_ChatConfig.Load<FL_ChatConfig>(FL_ChatConfig.SavePath);
             FL_ChatConfig.Save(FL_ChatConfig.SavePath, Master.ChatConfig);
+            
+            Master.IpBansConfig = (FL_IPBanConfig)FL_IPBanConfig.Load<FL_IPBanConfig>(FL_IPBanConfig.SavePath);
+            FL_IPBanConfig.Save(FL_IPBanConfig.SavePath, Master.IpBansConfig);
 
             Master.LeaderboardFile = (FL_Leaderboard)FL_Leaderboard.Load<FL_Leaderboard>(FL_Leaderboard.SavePath);
             FL_Leaderboard.Save(FL_Leaderboard.SavePath, Master.LeaderboardFile);
