@@ -3,6 +3,7 @@ using RTServer.Files;
 using RTShared.Commands;
 using RTShared.Files.Configs;
 using RTShared.Misc;
+using System.Text.RegularExpressions;
 
 namespace RTServer.Managers
 {
